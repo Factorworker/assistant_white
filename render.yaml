@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: assistant-white
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/auth/status
+    envVars:
+      - key: MONGODB_URI
+        value: 'mongodb://wushuyong2021_db_user:2WhUI2LpGZxi2urk@ac-vqfifne-shard-00-00.m8bu4op.mongodb.net:27017,ac-vqfifne-shard-00-01.m8bu4op.mongodb.net:27017,ac-vqfifne-shard-00-02.m8bu4op.mongodb.net:27017/zhulibai?ssl=true&replicaSet=atlas-jans9f-shard-0&authSource=admin&retryWrites=true&w=majority'
