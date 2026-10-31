@@ -769,7 +769,7 @@ app.use('/api', router)
 // 静态前端（vite 构建产物）
 const DIST = path.join(__dirname, 'dist')
 app.use(express.static(DIST))
-app.get('*', (req, res) => {
+app.get('*splat', (req, res) => {
   res.sendFile(path.join(DIST, 'index.html'))
 })
 
